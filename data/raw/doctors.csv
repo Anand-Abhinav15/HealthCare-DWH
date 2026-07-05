@@ -1,0 +1,501 @@
+doctor_id,doctor_name,specialization,experience_years
+D000001,Daniel Adams,Dermatology,30
+D000002,Maria Lynch,Pediatrics,17
+D000003,Nicholas Martin,Pediatrics,1
+D000004,William Bowman,Oncology,8
+D000005,Melinda Cameron,Oncology,35
+D000006,Crystal Johnson,General Medicine,18
+D000007,Derek Clark,General Medicine,22
+D000008,Sherri Edwards,cadiology,19
+D000009,Jennifer Rocha,Dermatology,11
+D000010,Derek Wright,Dermatology,1
+D000011,Deborah Richards,Oncology,17
+D000012,Jennifer Robinson,Pediatrics,12
+D000013,Ms. Ann Williams MD,Pediatrics,7
+D000014,Rebecca Henderson,General Medicine,20
+D000015,James Ferrell,General Medicine,33
+D000016,Tricia Valencia,Pediatrics,13
+D000017,Nathan Maldonado,neurology,24
+D000018,Debra Davidson,General Medicine,11
+D000019,Jeffrey Chavez,Pediatrics,34
+D000020,Sherri Baker,cadiology,21
+D000021,Cassandra Gaines,Dermatology,2
+D000022,Elizabeth Fowler,cadiology,24
+D000023,Brittany Farmer,General Medicine,20
+D000024,Paula Moreno,neurology,4
+D000025,Fred Smith,neurology,6
+D000026,Sherry Decker,cadiology,32
+D000027,Anthony Humphrey,General Medicine,5
+D000028,Angelica Tucker,General Medicine,35
+D000029,Philip Cannon,General Medicine,9
+D000030,John Pierce,neurology,31
+D000031,Shane Henderson,Pediatrics,11
+D000032,Joshua Blair,Orthopedics,34
+D000033,Eric Carney,General Medicine,28
+D000034,Jessica Holmes,neurology,35
+D000035,Danny Morgan,General Medicine,13
+D000036,Crystal Robinson,Oncology,20
+D000037,Mark Perez,Dermatology,24
+D000038,Shannon Jones,Dermatology,34
+D000039,Michael Lewis,Dermatology,8
+D000040,Timothy Duncan,neurology,15
+D000041,Richard Aguirre,cadiology,22
+D000042,Brent Jordan,cadiology,15
+D000043,John Daniel,Pediatrics,15
+D000044,Victoria Garcia,cadiology,5
+D000045,Gerald Hensley,Oncology,4
+D000046,Connor West,neurology,5
+D000047,Donald Wright,cadiology,22
+D000048,Jessica Callahan,cadiology,33
+D000049,Amber Kidd,neurology,18
+D000050,Tracy House,Oncology,32
+D000051,Carol Tucker,neurology,35
+D000052,James Brown,neurology,31
+D000053,William Baker,neurology,31
+D000054,Jordan Henderson,General Medicine,27
+D000055,Whitney Peters,neurology,7
+D000056,Brittney Phillips,cadiology,28
+D000057,Lauren Daniels,Orthopedics,28
+D000058,Amy Silva,Dermatology,30
+D000059,Sarah Moore,General Medicine,4
+D000060,Angela Lopez,Oncology,7
+D000061,Megan Young,cadiology,26
+D000062,Steve Sanchez,Oncology,22
+D000063,Lisa Barnes,General Medicine,7
+D000064,Kelly Donovan,neurology,13
+D000065,Mike Allen,neurology,35
+D000066,Michael Evans,Dermatology,9
+D000067,Paul Jones,Dermatology,12
+D000068,Zachary Ferrell,Orthopedics,30
+D000069,Daniel Baker,neurology,5
+D000070,Shirley Suarez,Dermatology,7
+D000071,Christopher Bass,cadiology,35
+D000072,Lisa Archer,General Medicine,1
+D000073,Aimee Montoya,cadiology,16
+D000074,Matthew Mcmillan,neurology,27
+D000075,Brian Rodriguez,Dermatology,31
+D000076,Denise Jacobs,neurology,26
+D000077,Christina Walters,cadiology,11
+D000078,John Whitehead,Dermatology,1
+D000079,Anna Henderson,Dermatology,17
+D000080,Aaron Wise,General Medicine,30
+D000081,Deborah Figueroa,Orthopedics,28
+D000082,Jessica Smith,Oncology,32
+D000083,Stephen Mckee,neurology,13
+D000084,Sandra Aguilar,Orthopedics,14
+D000085,Cameron Parker,cadiology,35
+D000086,Rebecca Valencia,cadiology,21
+D000087,Christine Wright,cadiology,4
+D000088,Richard Henson,Pediatrics,31
+D000089,Marc Moore,Pediatrics,34
+D000090,Sharon Cherry,neurology,4
+D000091,Sierra Johnson,Pediatrics,6
+D000092,Evelyn Galvan,General Medicine,12
+D000093,Sharon Cochran,cadiology,5
+D000094,Richard Rodriguez,Oncology,16
+D000095,Shannon Walker,Dermatology,8
+D000096,Julia Torres,Pediatrics,16
+D000097,Crystal Johnson,Pediatrics,3
+D000098,Garrett Lin,Pediatrics,6
+D000099,Diana May,Dermatology,34
+D000100,William Herrera,Orthopedics,17
+D000101,Ashley Waller,neurology,21
+D000102,Victor Baker,neurology,17
+D000103,Jeffrey Chandler,Dermatology,9
+D000104,Larry Dixon,Oncology,20
+D000105,Kenneth Scott,Dermatology,21
+D000106,April Frost,General Medicine,5
+D000107,Michelle Harmon,cadiology,30
+D000108,Helen Jones,Pediatrics,7
+D000109,Erin Edwards,cadiology,35
+D000110,Michelle Evans,neurology,33
+D000111,Jason Powell,Orthopedics,9
+D000112,Cameron Fisher,Orthopedics,5
+D000113,Megan Orr,neurology,24
+D000114,Elizabeth Kelley,Orthopedics,11
+D000115,Dustin Jordan,Dermatology,35
+D000116,Mary Marshall,Oncology,20
+D000117,Daniel Kennedy,Pediatrics,34
+D000118,Rebecca Jackson,cadiology,20
+D000119,Jose Schultz,Oncology,7
+D000120,Robert Potter,neurology,17
+D000121,Courtney Gonzalez,cadiology,7
+D000122,David Alvarez,Oncology,10
+D000123,Angel Perry,Orthopedics,19
+D000124,Cheyenne Horton,Pediatrics,14
+D000125,David Douglas Jr.,Oncology,22
+D000126,Patricia Rodriguez,neurology,17
+D000127,Christopher Rubio,Pediatrics,32
+D000128,Amber Wright,Orthopedics,4
+D000129,Joyce Solis,cadiology,28
+D000130,Victoria Larson,General Medicine,18
+D000131,Stephanie Salazar,cadiology,1
+D000132,Kathy Rivas,Orthopedics,9
+D000133,Stephanie Manning,Oncology,17
+D000134,David Wright,neurology,29
+D000135,Pamela Boyd,Pediatrics,28
+D000136,Denise Jones,Pediatrics,1
+D000137,Devon Flores,cadiology,5
+D000138,Brenda Hall,Oncology,10
+D000139,Michelle Brown,Pediatrics,3
+D000140,Joshua Perry,General Medicine,24
+D000141,Jason Stein,Pediatrics,10
+D000142,Melissa Gates,Dermatology,9
+D000143,Jamie Smith,cadiology,20
+D000144,Paul Castaneda,Orthopedics,3
+D000145,Jennifer Adkins,Orthopedics,14
+D000146,Lindsey Walker,Oncology,16
+D000147,Jeffrey Johnson,Oncology,7
+D000148,Michael Powell,Orthopedics,27
+D000149,John Anderson,Pediatrics,10
+D000150,Alyssa Long,neurology,11
+D000151,Alyssa Day,General Medicine,12
+D000152,Joel Williams,Dermatology,2
+D000153,Daniel Murphy,neurology,22
+D000154,Jamie Walton,General Medicine,27
+D000155,Darlene Miller,General Medicine,16
+D000156,Joshua Cooke,Orthopedics,11
+D000157,Matthew Harrington,General Medicine,7
+D000158,Nicole Herring,Dermatology,3
+D000159,Alex Hernandez,General Medicine,31
+D000160,Michael Elliott,neurology,13
+D000161,Michael Wang,General Medicine,30
+D000162,Lawrence Adkins,Orthopedics,20
+D000163,Robert Oconnell,General Medicine,15
+D000164,Alexander Collins,neurology,2
+D000165,Tina Sanders,Oncology,13
+D000166,Angela Vaughn,Dermatology,22
+D000167,Ashley Barton,Orthopedics,5
+D000168,Lindsay Martinez,General Medicine,18
+D000169,Dr. Hannah Patterson,Orthopedics,33
+D000170,Jonathan Peterson,Dermatology,35
+D000171,Samantha Garcia,Orthopedics,2
+D000172,Madison Poole,cadiology,17
+D000173,Jessica Gross,neurology,17
+D000174,Debra Morton,cadiology,7
+D000175,Karen Graham,Pediatrics,28
+D000176,Debra Christian,Orthopedics,21
+D000177,Angelica Keith,Dermatology,33
+D000178,John Bishop,cadiology,25
+D000179,Allen Rosales,Pediatrics,13
+D000180,Daniel Salinas,Orthopedics,3
+D000181,Spencer Haynes,Oncology,28
+D000182,Adam Vaughan,cadiology,34
+D000183,Nathan Freeman,General Medicine,35
+D000184,Melissa Brewer,Oncology,13
+D000185,Ricky Davis II,Orthopedics,28
+D000186,Elizabeth Perkins,cadiology,22
+D000187,Joseph Coleman,Pediatrics,21
+D000188,Erin Warner,Oncology,8
+D000189,David Martinez,Oncology,20
+D000190,Bryan Herrera,Pediatrics,20
+D000191,Cathy Robinson,Oncology,27
+D000192,Dr. William Warren,Orthopedics,26
+D000193,Brian Lee,Oncology,19
+D000194,Christopher Smith,Pediatrics,9
+D000195,Denise Mccann,neurology,27
+D000196,Melissa Martinez,Oncology,25
+D000197,Katherine Salas,Oncology,12
+D000198,Julie Alexander,Pediatrics,20
+D000199,Anthony Everett,Dermatology,1
+D000200,Rodney Morales,Orthopedics,19
+D000201,Mark Brown,neurology,28
+D000202,Justin Torres,General Medicine,21
+D000203,Bailey Duran DDS,Dermatology,29
+D000204,Courtney Mills,Dermatology,14
+D000205,Jeremy Dalton,Pediatrics,31
+D000206,Elizabeth Oliver DDS,General Medicine,11
+D000207,Theresa Clark,Oncology,6
+D000208,Matthew Moore,Orthopedics,33
+D000209,Benjamin Smith,Oncology,22
+D000210,Kirk Carter,cadiology,16
+D000211,Michael Warner,Oncology,20
+D000212,Michael Bradshaw,neurology,13
+D000213,Lori Guerrero,neurology,2
+D000214,Jessica Stephens,cadiology,16
+D000215,Susan Serrano,Dermatology,5
+D000216,Christopher Parker,Dermatology,27
+D000217,Laura Roberts,Oncology,13
+D000218,Michael Lyons,Oncology,25
+D000219,Kathryn Snyder,Dermatology,26
+D000220,Andrew Reynolds,neurology,10
+D000221,David Davis,Oncology,1
+D000222,Sara Johnston,General Medicine,7
+D000223,Yvonne Chambers,General Medicine,28
+D000224,Andrew Avila,neurology,12
+D000225,Matthew Moon,General Medicine,34
+D000226,Kevin Walters,Dermatology,4
+D000227,Brandon Bailey MD,Pediatrics,16
+D000228,Shannon Rivera,General Medicine,8
+D000229,Donna Landry,Dermatology,9
+D000230,Krista Gibson,General Medicine,30
+D000231,Frank Cordova,Oncology,34
+D000232,Jose Travis,Pediatrics,21
+D000233,Kimberly Gutierrez,General Medicine,29
+D000234,Isaiah Avila,Pediatrics,33
+D000235,Olivia Harris,Dermatology,29
+D000236,Tanya Kim,neurology,31
+D000237,Barbara Dudley,Dermatology,17
+D000238,Cynthia Moore,General Medicine,16
+D000239,Kristen Davis,General Medicine,18
+D000240,Susan Murray MD,General Medicine,34
+D000241,Kathleen Moran,Dermatology,16
+D000242,Denise Davenport,Orthopedics,29
+D000243,Mrs. Kristen Reyes,cadiology,19
+D000244,Katie Suarez,neurology,18
+D000245,Desiree Tyler,Orthopedics,21
+D000246,Timothy Romero,Pediatrics,6
+D000247,Diane Evans,neurology,10
+D000248,Yvonne Burns,neurology,25
+D000249,Joshua Reed,Oncology,10
+D000250,Kimberly Gibson,Oncology,14
+D000251,Colin Terry,cadiology,27
+D000252,Cynthia Rowe,Dermatology,22
+D000253,Patrick Thornton,Pediatrics,30
+D000254,Jasmin Alvarado,Dermatology,4
+D000255,Veronica Simpson,neurology,27
+D000256,Jonathan Lawrence,Dermatology,2
+D000257,Shelly Alexander,General Medicine,25
+D000258,Joyce Bowen,Dermatology,1
+D000259,Matthew Moore,Orthopedics,20
+D000260,Wayne Morgan,General Medicine,25
+D000261,Marie Christian,General Medicine,27
+D000262,Shannon James,Pediatrics,35
+D000263,Nathan Malone,General Medicine,15
+D000264,Amanda Jones,Dermatology,15
+D000265,Tammie Bright,Orthopedics,28
+D000266,Jessica Garcia,Dermatology,2
+D000267,Shelia Wallace,Dermatology,22
+D000268,Stephanie Williams,Oncology,26
+D000269,Elaine Brooks,Oncology,11
+D000270,Joseph Knight,General Medicine,30
+D000271,Carolyn Miller,neurology,35
+D000272,Lisa Allen,cadiology,26
+D000273,Briana Murray,Pediatrics,2
+D000274,David Smith,cadiology,28
+D000275,Stephanie Byrd,neurology,30
+D000276,Jeremy Reed,neurology,4
+D000277,Margaret Coleman,Orthopedics,25
+D000278,Ryan Gonzalez,Orthopedics,14
+D000279,John Young,Dermatology,21
+D000280,Laura Haney,Orthopedics,25
+D000281,William Barrett,Orthopedics,27
+D000282,Keith Jennings,Orthopedics,6
+D000283,Amber Obrien,Dermatology,2
+D000284,Tanner Mitchell DDS,Oncology,35
+D000285,Heather Fields,cadiology,23
+D000286,Megan Le,neurology,5
+D000287,Sara Fuller,General Medicine,3
+D000288,Maria Parker,General Medicine,2
+D000289,Kevin Oconnor,neurology,13
+D000290,Edward Burgess,General Medicine,2
+D000291,Carlos Ryan,Pediatrics,10
+D000292,Kiara Mcintyre,neurology,9
+D000293,Dawn Summers,Dermatology,8
+D000294,Dr. Paul Morgan,Pediatrics,14
+D000295,Victor Taylor,Dermatology,17
+D000296,Shannon Ramsey,General Medicine,24
+D000297,Tracy Ballard,neurology,8
+D000298,Richard Smith,General Medicine,11
+D000299,Jordan Chambers,Orthopedics,7
+D000300,Lauren Carson,Pediatrics,2
+D000301,Ashley Hall,Orthopedics,25
+D000302,Stephen Hoffman,Dermatology,13
+D000303,Connie Brown,cadiology,16
+D000304,Susan Turner,cadiology,20
+D000305,Charles Shah,General Medicine,8
+D000306,Johnathan Davis,General Medicine,3
+D000307,Brandy Chavez,Orthopedics,35
+D000308,Natalie Bautista,Dermatology,24
+D000309,Patrick Moore,cadiology,33
+D000310,Brett Burns,Oncology,22
+D000311,Trevor Johnson,cadiology,27
+D000312,Jeremy Sampson,General Medicine,32
+D000313,Ariana Jennings,cadiology,28
+D000314,Vanessa Howard,Orthopedics,30
+D000315,Colton Martinez,Oncology,10
+D000316,Jordan Bates,Dermatology,12
+D000317,Linda Smith,Oncology,34
+D000318,Dana Martinez,Oncology,18
+D000319,Andrea Hubbard,Pediatrics,35
+D000320,Daniel Kane,General Medicine,31
+D000321,Charles Lester,Dermatology,28
+D000322,Scott Thomas,General Medicine,18
+D000323,David Thompson,Orthopedics,16
+D000324,Allison Smith,General Medicine,6
+D000325,Cynthia Morris,Orthopedics,29
+D000326,Anthony Harmon,neurology,30
+D000327,Nichole Alvarez,Pediatrics,25
+D000328,Kayla Rodriguez,Orthopedics,2
+D000329,Theresa Williams,Dermatology,21
+D000330,Sharon Boyd,neurology,32
+D000331,Victor Brown,neurology,23
+D000332,James Parks,General Medicine,17
+D000333,Theodore Jones Jr.,Orthopedics,18
+D000334,Ana Hill,Pediatrics,18
+D000335,Kimberly Nguyen,Pediatrics,1
+D000336,Kerry Chavez DDS,Pediatrics,13
+D000337,Michael Farrell,cadiology,16
+D000338,Patricia Le,Oncology,27
+D000339,Jesse Perez,Dermatology,16
+D000340,Jesse Perry,Oncology,31
+D000341,Jeffery Ortega,Oncology,32
+D000342,Christian Leblanc,Dermatology,2
+D000343,Ronald Davis,cadiology,19
+D000344,Parker Cain,neurology,26
+D000345,Laurie Hoffman,Oncology,16
+D000346,Bryan Gomez,Orthopedics,24
+D000347,Nicole Parrish,Dermatology,34
+D000348,Tracy Burke,Orthopedics,28
+D000349,Kenneth Lewis,Oncology,22
+D000350,Courtney Rodriguez,Orthopedics,30
+D000351,Holly Farmer,Orthopedics,20
+D000352,Renee Bruce,Orthopedics,15
+D000353,Sabrina Austin,cadiology,13
+D000354,Allison Hickman,Orthopedics,8
+D000355,Debra White,Oncology,35
+D000356,Ellen Morgan,General Medicine,12
+D000357,Sergio Knight,neurology,14
+D000358,Charles Schultz,Oncology,31
+D000359,Paul Lewis,Orthopedics,34
+D000360,Glen Wood,Pediatrics,19
+D000361,Paula Bradley,cadiology,13
+D000362,Anthony Moore,Orthopedics,15
+D000363,Megan Nelson,Orthopedics,12
+D000364,Karla Ramos,Orthopedics,1
+D000365,Paul Wilson,Oncology,35
+D000366,Douglas Gregory,neurology,18
+D000367,Mr. Andrew Foster,cadiology,4
+D000368,Aimee Turner,Pediatrics,19
+D000369,Chad Scott,Oncology,9
+D000370,Adam Burgess,Oncology,32
+D000371,James Padilla,cadiology,1
+D000372,Sandra Drake,Pediatrics,19
+D000373,Scott Williams,Dermatology,31
+D000374,Thomas Atkins,Dermatology,22
+D000375,Laura Mckinney,neurology,4
+D000376,Brian Smith,Orthopedics,31
+D000377,Robert Montgomery,cadiology,5
+D000378,Tamara Davis,Dermatology,32
+D000379,Dana Chapman,cadiology,4
+D000380,Jennifer Collins,neurology,10
+D000381,Gary Jackson,General Medicine,20
+D000382,Ashley Hicks,cadiology,16
+D000383,Hannah Luna,cadiology,27
+D000384,Robin Young,Pediatrics,15
+D000385,Craig Morrison,General Medicine,34
+D000386,Mary Thompson,Dermatology,29
+D000387,Kathleen Webster,Dermatology,20
+D000388,Joann Glass,General Medicine,28
+D000389,Madison Weber,Orthopedics,4
+D000390,Lori Hernandez,Pediatrics,7
+D000391,Jeremy Turner,General Medicine,14
+D000392,Anthony Romero,Oncology,14
+D000393,Jesse Brown,Orthopedics,6
+D000394,Angela Lin,neurology,16
+D000395,Lisa Hunter,neurology,5
+D000396,Julian Conner,neurology,1
+D000397,Joanna Pacheco,Dermatology,29
+D000398,Erica Alvarez,Oncology,31
+D000399,Antonio Garcia,Orthopedics,3
+D000400,Gwendolyn Klein,neurology,19
+D000401,Carrie Wright,Oncology,19
+D000402,Jeffrey Mills,Oncology,30
+D000403,Jake Campbell,cadiology,15
+D000404,George Harper,Orthopedics,13
+D000405,Maria Jones,Dermatology,8
+D000406,Michael Mitchell,Pediatrics,15
+D000407,Mary Escobar,Oncology,10
+D000408,Felicia Aguilar,Orthopedics,10
+D000409,Gregory Ponce,cadiology,4
+D000410,Jenna Larson,neurology,20
+D000411,Emily Bennett,Pediatrics,19
+D000412,Robin Santiago,Dermatology,8
+D000413,Nancy Jennings,Dermatology,20
+D000414,Maria Henderson,Oncology,26
+D000415,Jack White,Orthopedics,33
+D000416,Travis Tucker,Pediatrics,32
+D000417,Chad Jones,Dermatology,6
+D000418,Ashley Wise,Pediatrics,3
+D000419,Sophia Johnson,Dermatology,21
+D000420,Ralph Anderson,Pediatrics,17
+D000421,Christopher Guerra,cadiology,6
+D000422,Rhonda Martin,neurology,2
+D000423,Jason Rhodes,General Medicine,18
+D000424,Jeremy Mitchell,Pediatrics,3
+D000425,Joann Ferguson,General Medicine,12
+D000426,Robert Harrison,Dermatology,34
+D000427,Holly Valentine,Oncology,29
+D000428,Mrs. Diane Reyes,Orthopedics,12
+D000429,Tracy Montoya,Pediatrics,28
+D000430,Brenda Wright,Oncology,32
+D000431,Shelly Spencer,cadiology,31
+D000432,Ryan Rosales,Orthopedics,27
+D000433,Phillip Nelson,Orthopedics,21
+D000434,Brittany Kim,Oncology,7
+D000435,Courtney Hayes,General Medicine,11
+D000436,Alexander Brown,Orthopedics,27
+D000437,Cynthia Vang,Oncology,32
+D000438,Alfred Galvan,Orthopedics,26
+D000439,Marie Moody,General Medicine,3
+D000440,Dustin Gallegos,Dermatology,6
+D000441,Brenda Thornton,Orthopedics,17
+D000442,Aaron Miller,Orthopedics,8
+D000443,Ruben Dunn,General Medicine,26
+D000444,Kelsey Rodriguez,General Medicine,33
+D000445,Eric Williams,General Medicine,1
+D000446,Riley Bryant,Oncology,35
+D000447,Taylor Carlson,Dermatology,27
+D000448,Jose Allen,cadiology,13
+D000449,Jeffrey Mendez,Pediatrics,24
+D000450,Jason Beck,Pediatrics,32
+D000451,William Jones,Oncology,29
+D000452,Katie Mcneil,General Medicine,4
+D000453,Jeanette Harrison,neurology,18
+D000454,Veronica King,Pediatrics,9
+D000455,Richard Cooper,Orthopedics,29
+D000456,Lori Ingram,Oncology,32
+D000457,Evelyn Williams,cadiology,2
+D000458,Robin Thompson,Oncology,16
+D000459,Julie Dominguez,Oncology,11
+D000460,Robin Brown,Orthopedics,1
+D000461,Judith Carter,Pediatrics,27
+D000462,Curtis Williams,cadiology,15
+D000463,Kaylee Hays,General Medicine,8
+D000464,Dawn Mullins,Dermatology,8
+D000465,Howard Norman,Oncology,10
+D000466,Evelyn Martinez,Dermatology,19
+D000467,Steve Paul,Pediatrics,18
+D000468,Jasmine Beltran,Dermatology,31
+D000469,Jonathan Glass MD,Dermatology,16
+D000470,Monica Miller,Dermatology,10
+D000471,Samantha Gardner,Dermatology,13
+D000472,Bobby Guerrero,Pediatrics,33
+D000473,Lance Simmons,Oncology,9
+D000474,Heather Williams,General Medicine,5
+D000475,Heather Bolton,Orthopedics,27
+D000476,William Gould,Orthopedics,33
+D000477,Mark Cox,Orthopedics,1
+D000478,Meghan Cisneros,Orthopedics,20
+D000479,Lawrence Harrington,General Medicine,32
+D000480,Austin Osborne,General Medicine,10
+D000481,James Bradley,Dermatology,35
+D000482,Meghan Rush,Dermatology,23
+D000483,Phillip Berry,Orthopedics,35
+D000484,Jennifer Banks,Dermatology,30
+D000485,Brian Fitzgerald,Orthopedics,13
+D000486,Mr. Justin Green III,Oncology,16
+D000487,Zachary Mitchell,Pediatrics,25
+D000488,Katherine Martinez,neurology,27
+D000489,Jodi Roach,cadiology,21
+D000490,Brandon Fleming,Oncology,31
+D000491,Emma Reed,Oncology,25
+D000492,Joshua Vance,Dermatology,10
+D000493,Michelle Ho,Dermatology,3
+D000494,Rebecca Hicks,neurology,33
+D000495,Curtis Taylor,Pediatrics,22
+D000496,Allison Spencer,General Medicine,7
+D000497,Robert Arnold,General Medicine,29
+D000498,Angelica Parker,cadiology,34
+D000499,Dr. Kelly Hammond DVM,Dermatology,1
+D000500,William Day,Oncology,10

@@ -1,0 +1,51 @@
+hospital_id,hospital_name,location,hospital_type
+H000001,Fowler Medical Center,Chicago,Government
+H000002,Johnson Medical Center,Dallas,Private
+H000003,Hill Medical Center,Boston,Private
+H000004,Walker Medical Center,Chicago,Government
+H000005,Doyle Medical Center,Miami,Government
+H000006,Rhodes Medical Center,New York,Government
+H000007,Mcclain Medical Center,Boston,Private
+H000008,Miller Medical Center,New York,Private
+H000009,Henderson Medical Center,Miami,Private
+H000010,Johnson Medical Center,San Francisco,Teaching
+H000011,Robinson Medical Center,New York,Private
+H000012,Wagner Medical Center,Miami,Teaching
+H000013,Johnson Medical Center,Dallas,Private
+H000014,Gonzalez Medical Center,Boston,Teaching
+H000015,Santos Medical Center,Chicago,Government
+H000016,Gardner Medical Center,Miami,Government
+H000017,Robinson Medical Center,Seattle,Teaching
+H000018,Lawrence Medical Center,Dallas,Government
+H000019,Pacheco Medical Center,San Francisco,Government
+H000020,Smith Medical Center,Miami,Government
+H000021,Shaffer Medical Center,Dallas,Teaching
+H000022,Wolfe Medical Center,Boston,Government
+H000023,Peterson Medical Center,New York,Private
+H000024,Moore Medical Center,Dallas,Government
+H000025,Bernard Medical Center,Boston,Government
+H000026,Rogers Medical Center,Miami,Teaching
+H000027,Davis Medical Center,San Francisco,Teaching
+H000028,Davis Medical Center,Houston,Teaching
+H000029,Abbott Medical Center,Seattle,Private
+H000030,Munoz Medical Center,Dallas,Government
+H000031,Roman Medical Center,Houston,Private
+H000032,Blair Medical Center,Houston,Specialty
+H000033,Herrera Medical Center,Miami,Teaching
+H000034,Dudley Medical Center,Boston,Teaching
+H000035,Gray Medical Center,New York,Private
+H000036,Arnold Medical Center,New York,Teaching
+H000037,Calderon Medical Center,Miami,Teaching
+H000038,Montgomery Medical Center,Chicago,Private
+H000039,Hensley Medical Center,Seattle,Private
+H000040,Ray Medical Center,San Francisco,Specialty
+H000041,Bush Medical Center,San Francisco,Private
+H000042,Williams Medical Center,Dallas,Private
+H000043,Perez Medical Center,Boston,Teaching
+H000044,Roberts Medical Center,Miami,Specialty
+H000045,Miller Medical Center,Seattle,Private
+H000046,Hall Medical Center,Houston,Specialty
+H000047,Garcia Medical Center,Chicago,Government
+H000048,Ramirez Medical Center,Chicago,Private
+H000049,Reid Medical Center,Houston,Specialty
+H000050,Diaz Medical Center,Chicago,Specialty
