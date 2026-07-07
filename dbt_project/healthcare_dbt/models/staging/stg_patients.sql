@@ -14,7 +14,13 @@ cleaned AS (
         CAST(registration_date AS DATE) AS registration_date,
         INITCAP(city) AS city,
         insurance_provider,
-        EXTRACT(YEAR FROM AGE(CURRENT_DATE, date_of_birth))::INT AS age
+        EXTRACT(YEAR FROM AGE(CURRENT_DATE, date_of_birth))::INT AS age,
+        CASE
+            WHEN EXTRACT(YEAR FROM AGE(CURRENT_AGE, date_of_birth))::INT < 18 THEN 'child'
+            WHEN EXTRACT(YEAR FROM AGE(CURRENT_AGE, date_of_birth))::INT < BETWEEN 18 AND 35 THEN 'Young Adult'
+            WHEN EXTRACT(YEAR FROM AGE(CURRENT_AGE, date_of_birth))::INT < BETWEEN 36 AND 60 THEN 'Adult'
+            ELSE 'Senior'
+        END AS age_group
     FROM source
 )
 
