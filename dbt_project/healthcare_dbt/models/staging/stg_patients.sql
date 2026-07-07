@@ -1,7 +1,7 @@
 WITH source AS (
     SELECT *
     FROM {{ source('staging', 'patients') }}
-);
+),
 
 cleaned AS (
     SELECT
@@ -14,17 +14,23 @@ cleaned AS (
         CAST(registration_date AS DATE) AS registration_date,
         INITCAP(city) AS city,
         insurance_provider,
-        EXTRACT(YEAR FROM AGE(CURRENT_DATE, date_of_birth))::INT AS age,
+        EXTRACT(YEAR FROM AGE(CURRENT_DATE, CAST(date_of_birth AS DATE)))::INT AS age
+    FROM source
+),
+
+final AS (
+    SELECT
+        *,
         CASE
-            WHEN EXTRACT(YEAR FROM AGE(CURRENT_AGE, date_of_birth))::INT < 18 THEN 'child'
-            WHEN EXTRACT(YEAR FROM AGE(CURRENT_AGE, date_of_birth))::INT < BETWEEN 18 AND 35 THEN 'Young Adult'
-            WHEN EXTRACT(YEAR FROM AGE(CURRENT_AGE, date_of_birth))::INT < BETWEEN 36 AND 60 THEN 'Adult'
+            WHEN age < 18 THEN 'Child'
+            WHEN age BETWEEN 18 AND 35 THEN 'Young Adult'
+            WHEN age BETWEEN 36 AND 60 THEN 'Adult'
             ELSE 'Senior'
         END AS age_group
-    FROM source
+    FROM cleaned
 )
 
 
 SELECT *
-FROM cleaned
+FROM final
 
