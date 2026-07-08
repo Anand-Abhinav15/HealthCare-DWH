@@ -1,0 +1,153 @@
+version: 2
+
+models:
+
+  - name: stg_patients
+    description: "Cleaned patient staging model"
+
+    columns:
+
+      - name: patient_id
+        description: "Unique identifier for each patient"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: patient_name
+        description: "Patient full name"
+
+      - name: gender
+        description: "Patient gender"
+        data_tests:
+          - accepted_values:  
+              arguments:
+                values:
+                  - male
+                  - female
+
+      - name: insurance_provider
+        description: "Insurance company"
+
+      - name: age
+        description: "Current patient age"
+
+      - name: age_group
+        description: "Age bucket"
+
+      - name: registration_date
+        description: "Patient registration date"
+
+
+  - name: stg_doctors
+    description: "Doctor staging model"
+
+    columns:
+
+      - name: doctor_id
+        data_tests:
+          - unique
+          - not_null
+      
+      - name: specialization
+        data_tests:
+          - not_null
+
+      - name: experience_level
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - Junior
+                  - Mid
+                  - Senior
+
+
+  - name: stg_hospitals
+    description: "Hospital staging model"
+
+    columns:
+    
+      - name: hospital_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: hospital_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - Government
+                  - Private
+                  - Teaching
+                  - Specialty
+
+  
+  - name: stg_appointments
+    description: "Appointments staging model"
+
+    columns:
+
+      - name: appointment_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: patient_id
+        data_tests:
+          - relationships:
+              to: ref('stg_patients')
+              field: patient_id
+
+      - name: doctor_id
+        data_tests:
+          - relationships:
+              to: ref('stg_doctors')
+              field: doctor_id
+
+      - name: hospital_id
+        data_tests:
+          - relationships:
+              to: ref('stg_hospitals')
+              field: hospital_id
+
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - Completed
+                  - Scheduled
+                  - Cancelled
+
+  - name: stg_treatments
+
+    columns:
+
+      - name: treatment_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: appointment_id
+        data_tests:
+          - relationships:
+              to: ref('stg_appointments')
+              field: appointment_id
+
+
+  - name: stg_billing
+    
+    columns:
+
+      - name: billing_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: appointment_id
+        data_tests:
+          - relationships:
+              to: ref('stg_appointments')
+              field: appointment_id
+
