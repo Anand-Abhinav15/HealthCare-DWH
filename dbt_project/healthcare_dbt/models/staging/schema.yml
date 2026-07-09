@@ -96,20 +96,23 @@ models:
       - name: patient_id
         data_tests:
           - relationships:
-              to: ref('stg_patients')
-              field: patient_id
+              arguments:
+                to: ref('stg_patients')
+                field: patient_id
 
       - name: doctor_id
         data_tests:
           - relationships:
-              to: ref('stg_doctors')
-              field: doctor_id
+              arguments:
+                to: ref('stg_doctors')
+                field: doctor_id
 
       - name: hospital_id
         data_tests:
           - relationships:
-              to: ref('stg_hospitals')
-              field: hospital_id
+              arguments:
+                to: ref('stg_hospitals')
+                field: hospital_id
 
       - name: status
         data_tests:
@@ -132,8 +135,9 @@ models:
       - name: appointment_id
         data_tests:
           - relationships:
-              to: ref('stg_appointments')
-              field: appointment_id
+              arguments:
+                to: ref('stg_appointments')
+                field: appointment_id
 
 
   - name: stg_billing
@@ -148,6 +152,7 @@ models:
       - name: appointment_id
         data_tests:
           - relationships:
-              to: ref('stg_appointments')
-              field: appointment_id
+              arguments:
+                to: ref('stg_appointments')
+                field: appointment_id
 
