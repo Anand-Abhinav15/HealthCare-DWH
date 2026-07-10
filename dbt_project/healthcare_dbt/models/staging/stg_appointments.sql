@@ -3,7 +3,7 @@ SELECT
     patient_id,
     doctor_id,
     hospital_id,
-    appointment_date,
+    appointment_date::DATE AS appointment_date,
     EXTRACT(YEAR FROM appointment_date::DATE) AS appointment_year,
     EXTRACT(MONTH FROM appointment_date::DATE) AS appointment_month,
     TO_CHAR(appointment_date::DATE, 'Day') AS appointment_weekday,
