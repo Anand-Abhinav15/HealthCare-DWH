@@ -1,1 +1,36 @@
+version: 2
 
+models:
+  - name: fact_appointments
+    description: "Fact table containing one row per appointment."
+
+    columns:
+
+      - name: appointment_key
+        data_tests:
+          - unique
+          - not_null
+
+      - name: patient_key
+        data_test:
+          - not_null
+
+      - name: doctor_key
+        data_tests:
+          - not_null
+
+      - name: hospital_key
+        data_tests:
+          - not_null
+
+      - name: date_key
+        data_tests:
+          - not_null
+      
+      - name: treatment_cost
+        data_tests:
+          - not_null
+
+      - name: billing_amount
+        data_tests:
+          - not_null
