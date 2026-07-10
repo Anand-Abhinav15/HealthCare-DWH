@@ -40,3 +40,7 @@ models:
 
     marts:
       +materialized: table
+
+snapshots:
+  healthcare_dbt:
+    +target_schema: snapshots
