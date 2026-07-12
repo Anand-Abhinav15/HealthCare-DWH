@@ -6,7 +6,7 @@ WITH fact AS (
 doctor AS (
     SELECT *
     FROM {{ ref('dim_doctor') }}
-),
+)
 
 SELECT
     doctor.doctor_key,

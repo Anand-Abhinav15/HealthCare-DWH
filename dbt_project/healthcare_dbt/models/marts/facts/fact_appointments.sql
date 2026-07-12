@@ -1,3 +1,11 @@
+--Incremental loading
+
+{{  config(
+            materialized = 'incremental',
+            unique_key = 'appointment_id'
+) }}
+
+
 --CTE1- Appointments
 
 WITH appointments AS (

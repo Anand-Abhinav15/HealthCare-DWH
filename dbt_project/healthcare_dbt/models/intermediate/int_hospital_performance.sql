@@ -5,7 +5,7 @@ WITH fact AS (
 
 hospitals AS (
     SELECT *
-    FROM {{ ref('dim_hospitals') }}
+    FROM {{ ref('dim_hospital') }}
 )
 
 SELECT
