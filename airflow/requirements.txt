@@ -1,0 +1,7 @@
+dbt-core==1.11.12
+dbt-postgres==1.10.2
+
+pandas
+faker
+sqlalchemy
+psycopg2-binary
