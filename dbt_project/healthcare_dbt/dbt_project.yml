@@ -33,13 +33,22 @@ models:
   healthcare_dbt:
     # Config indicated by + and applies to all files under models/example/
     staging:
+      +schema: staging
       +materialized: view
     
     intermediate:
+      +schema: analytics
       +materialized: view
 
     marts:
-      +materialized: table
+
+      dimensions:
+        +schema: analytics
+        +materialized: table
+
+      facts:
+        +schema: analytics
+        +materialized: table
 
 snapshots:
   healthcare_dbt:

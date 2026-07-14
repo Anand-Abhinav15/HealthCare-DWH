@@ -8,6 +8,8 @@ default_args = {
     "depends_on_past": False,
 }
 
+DBT_PROJECT_DIR = "/opt/airflow/dbt_project/healthcare_dbt"
+
 with DAG(
     dag_id ="healthcare_dbt_pipeline",
     default_args =default_args,
@@ -17,29 +19,47 @@ with DAG(
     tags=["healthcare", "dbt"],
 ) as dag:
 
-    dbt_run = BashOperator(
-        task_id = "dbt_run",
-        cwd= "/opt/airflow/dbt_project/healthcare_dbt",
-        bash_command= """
-        dbt deps
-        dbt run
-        """
+    dbt_staging = BashOperator(
+        task_id = "dbt_staging",
+        cwd= DBT_PROJECT_DIR,
+        bash_command= "dbt run --select staging",
     )
 
-    dbt_test = BashOperator(
-        task_id = "dbt_test",
-        cwd = "/opt/airflow/dbt_project/healthcare_dbt",
-        bash_command= """
-        dbt test
-        """
+    dbt_dimensions = BashOperator(
+        task_id = "dbt_dimensions",
+        cwd= DBT_PROJECT_DIR,
+        bash_command= "dbt run --select marts.dimensions",
+    )
+
+    dbt_facts = BashOperator(
+        task_id = "dbt_facts",
+        cwd= DBT_PROJECT_DIR,
+        bash_command="dbt run --select marts.facts",
+    )
+
+    dbt_intermediate = BashOperator(
+        task_id = "dbt_intermediate",
+        cwd= DBT_PROJECT_DIR,
+        bash_command= "dbt run --select intermediate",
+    )
+
+    dbt_tests = BashOperator(
+        task_id = "dbt_tests",
+        cwd= DBT_PROJECT_DIR,
+        bash_command = "dbt test",
     )
 
     dbt_docs = BashOperator(
-        task_id="dbt_docs",
-        cwd="/opt/airflow/dbt_project/healthcare_dbt",
-        bash_command="""
-        dbt docs generate
-        """
+        task_id = "dbt_docs",
+        cwd= DBT_PROJECT_DIR,
+        bash_command= "dbt docs generate",
     )
 
-    dbt_run >> dbt_test >> dbt_docs
+    (
+        dbt_staging
+        >> dbt_dimensions
+        >> dbt_facts
+        >> dbt_intermediate
+        >> dbt_tests
+        >>dbt_docs
+    )
