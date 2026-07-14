@@ -1,5 +1,13 @@
-FROM apache/airflow:2.10.0-python3.11 
+FROM apache/airflow:2.10.5-python3.11
 
-COPY requirements.txt /
+USER root
 
-RUN pip install --no-cache-dir -r /requirements.txt
+RUN apt-get update && \
+    apt-get install -y gcc g++ build-essential && \
+    apt-get clean
+
+USER airflow
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
