@@ -2,15 +2,12 @@ version: 2
 
 sources:
   - name: staging
-    database: healthcare_dw
     schema: staging
 
     tables:
       - name: patients
+      - name: appointments
+      - name: billing
       - name: doctors
       - name: hospitals
-      - name: appointments
       - name: treatments
-      - name: billing
-
-
