@@ -76,7 +76,14 @@ services:
 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
+
       - ./dbt_project:/opt/airflow/dbt_project
+
+      - ./src:/opt/airflow/src
+
+      - ./data:/opt/airflow/data
+
+      - ./logs:/opt/airflow/logs
 
 
 
@@ -85,6 +92,9 @@ services:
     build: ./airflow
 
     container_name: airflow_webserver
+
+    env_file:
+      - .env  
 
     restart: unless-stopped
 
@@ -100,11 +110,21 @@ services:
 
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres:5432/airflow_db
 
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+
     command: webserver
 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
+
       - ./dbt_project:/opt/airflow/dbt_project
+
+      - ./src:/opt/airflow/src
+
+      - ./data:/opt/airflow/data
+
+      - ./logs:/opt/airflow/logs
 
 
 
@@ -113,6 +133,9 @@ services:
     build: ./airflow
 
     container_name: airflow_scheduler
+
+    env_file:
+      - .env
 
     restart: unless-stopped
 
@@ -129,8 +152,14 @@ services:
 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
+
       - ./dbt_project:/opt/airflow/dbt_project
 
+      - ./src:/opt/airflow/src
+
+      - ./data:/opt/airflow/data
+
+      - ./logs:/opt/airflow/logs
 
 
   superset:

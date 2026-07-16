@@ -1,0 +1,5 @@
+-- ==========================================================
+-- Seed Script
+-- ==========================================================
+-- Data will be loaded by the Python ETL pipeline.
+-- This file intentionally contains no INSERT statements.

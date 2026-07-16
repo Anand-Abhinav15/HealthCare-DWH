@@ -1,5 +1,3 @@
-CREATE SCHEMA IF NOT EXISTS staging;
-
 CREATE TABLE IF NOT EXISTS staging.patients (
 
     patient_id VARCHAR(20) PRIMARY KEY,
@@ -36,7 +34,7 @@ CREATE TABLE IF NOT EXISTS staging.appointments (
     hospital_id VARCHAR(20),
     appointment_date DATE,
     diagnosis_code VARCHAR(20),
-    treatment_cost NUMERIC(12, 2),
+    treatment_cost NUMERIC(12,2),
     appointment_duration INT,
     status VARCHAR(50)
 );
@@ -53,9 +51,8 @@ CREATE TABLE IF NOT EXISTS staging.billing (
 
     bill_id VARCHAR(20) PRIMARY KEY,
     appointment_id VARCHAR(20),
-    billing_amount NUMERIC(12, 2),
+    billing_amount NUMERIC(12,2),
     insurance_covered BOOLEAN,
     payment_status VARCHAR(50),
     payment_date DATE
-)
-
+);
