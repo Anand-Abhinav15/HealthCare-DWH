@@ -1,15 +1,13 @@
 from datetime import datetime
-
-from airflow import DAG
-
-from airflow.operators.python import PythonOperator
-from airflow.operators.bash import BashOperator
-
 import sys
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
 
+# Allow Airflow to import the src package
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.append(str(PROJECT_ROOT))
 
 from src.load_raw import load_all
@@ -21,19 +19,12 @@ default_args = {
 
 
 with DAG(
-
     dag_id="healthcare_pipeline",
-
     default_args=default_args,
-
     start_date=datetime(2025, 1, 1),
-
     schedule="@daily",
-
     catchup=False,
-
     tags=["healthcare", "etl"],
-
 ) as dag:
 
     load_raw = PythonOperator(
@@ -45,7 +36,8 @@ with DAG(
         task_id="dbt_run",
         bash_command="""
         cd /opt/airflow/dbt_project/healthcare_dbt &&
-        dbt run
+        dbt deps --profiles-dir /opt/airflow/dbt &&
+        dbt run --profiles-dir /opt/airflow/dbt
         """,
     )
 
@@ -53,7 +45,7 @@ with DAG(
         task_id="dbt_test",
         bash_command="""
         cd /opt/airflow/dbt_project/healthcare_dbt &&
-        dbt test
+        dbt test --profiles-dir /opt/airflow/dbt
         """,
     )
 

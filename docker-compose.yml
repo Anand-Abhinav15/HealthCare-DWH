@@ -80,13 +80,10 @@ services:
 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
-
       - ./dbt_project:/opt/airflow/dbt_project
-
+      - ./dbt:/opt/airflow/dbt
       - ./src:/opt/airflow/src
-
       - ./data:/opt/airflow/data
-
       - ./logs:/opt/airflow/logs
 
 
@@ -122,13 +119,10 @@ services:
 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
-
       - ./dbt_project:/opt/airflow/dbt_project
-
+      - ./dbt:/opt/airflow/dbt
       - ./src:/opt/airflow/src
-
       - ./data:/opt/airflow/data
-
       - ./logs:/opt/airflow/logs
 
 
@@ -161,13 +155,10 @@ services:
 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
-
       - ./dbt_project:/opt/airflow/dbt_project
-
+      - ./dbt:/opt/airflow/dbt
       - ./src:/opt/airflow/src
-
       - ./data:/opt/airflow/data
-
       - ./logs:/opt/airflow/logs
 
 

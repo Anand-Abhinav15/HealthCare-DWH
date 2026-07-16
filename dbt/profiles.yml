@@ -1,0 +1,13 @@
+healthcare_dbt:
+  target: dev
+
+  outputs:
+    dev:
+      type: postgres
+      host: 127.0.0.1
+      port: 5433
+      user: postgres
+      password: postgres
+      dbname: healthcare_db
+      schema: analytics
+      threads: 4
