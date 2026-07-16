@@ -4,8 +4,8 @@ healthcare_dbt:
   outputs:
     dev:
       type: postgres
-      host: 127.0.0.1
-      port: 5433
+      host: postgres
+      port: 5432
       user: postgres
       password: postgres
       dbname: healthcare_db

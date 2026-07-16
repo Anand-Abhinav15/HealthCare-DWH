@@ -19,11 +19,10 @@ models:
       - name: gender
         description: "Patient gender"
         data_tests:
-          - accepted_values:  
-              arguments:
-                values:
-                  - male
-                  - female
+          - accepted_values:
+              values:
+                - male
+                - female
 
       - name: insurance_provider
         description: "Insurance company"
@@ -47,7 +46,7 @@ models:
         data_tests:
           - unique
           - not_null
-      
+
       - name: specialization
         data_tests:
           - not_null
@@ -55,18 +54,17 @@ models:
       - name: experience_level
         data_tests:
           - accepted_values:
-              arguments:
-                values:
-                  - Junior
-                  - Mid
-                  - Senior
+              values:
+                - Junior
+                - Mid
+                - Senior
 
 
   - name: stg_hospitals
     description: "Hospital staging model"
 
     columns:
-    
+
       - name: hospital_id
         data_tests:
           - unique
@@ -75,14 +73,13 @@ models:
       - name: hospital_type
         data_tests:
           - accepted_values:
-              arguments:
-                values:
-                  - Government
-                  - Private
-                  - Teaching
-                  - Specialty
+              values:
+                - Government
+                - Private
+                - Teaching
+                - Specialty
 
-  
+
   - name: stg_appointments
     description: "Appointments staging model"
 
@@ -96,32 +93,29 @@ models:
       - name: patient_id
         data_tests:
           - relationships:
-              arguments:
-                to: ref('stg_patients')
-                field: patient_id
+              to: ref('stg_patients')
+              field: patient_id
 
       - name: doctor_id
         data_tests:
           - relationships:
-              arguments:
-                to: ref('stg_doctors')
-                field: doctor_id
+              to: ref('stg_doctors')
+              field: doctor_id
 
       - name: hospital_id
         data_tests:
           - relationships:
-              arguments:
-                to: ref('stg_hospitals')
-                field: hospital_id
+              to: ref('stg_hospitals')
+              field: hospital_id
 
       - name: status
         data_tests:
           - accepted_values:
-              arguments:
-                values:
-                  - Completed
-                  - Scheduled
-                  - Cancelled
+              values:
+                - Completed
+                - Scheduled
+                - Cancelled
+
 
   - name: stg_treatments
 
@@ -135,13 +129,12 @@ models:
       - name: appointment_id
         data_tests:
           - relationships:
-              arguments:
-                to: ref('stg_appointments')
-                field: appointment_id
+              to: ref('stg_appointments')
+              field: appointment_id
 
 
   - name: stg_billing
-    
+
     columns:
 
       - name: billing_id
@@ -152,7 +145,5 @@ models:
       - name: appointment_id
         data_tests:
           - relationships:
-              arguments:
-                to: ref('stg_appointments')
-                field: appointment_id
-
+              to: ref('stg_appointments')
+              field: appointment_id

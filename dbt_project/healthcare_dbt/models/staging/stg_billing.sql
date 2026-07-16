@@ -1,5 +1,5 @@
 SELECT
-    billing_id,
+    bill_id as billing_id,
     appointment_id,
     billing_amount,
     insurance_covered,
