@@ -71,8 +71,12 @@ services:
 
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres:5432/airflow_db
+
+      PYTHONPATH: /opt/airflow
+
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
@@ -107,8 +111,9 @@ services:
 
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres:5432/airflow_db
+
+      PYTHONPATH: /opt/airflow
 
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
@@ -145,8 +150,12 @@ services:
 
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres:5432/airflow_db
+
+      PYTHONPATH: /opt/airflow
+
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
 
     command: scheduler
 
