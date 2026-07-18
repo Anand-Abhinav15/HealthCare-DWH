@@ -24,12 +24,8 @@ DBT_PROFILES_DIR = "/opt/airflow/dbt"
 
 default_args = {
     "owner": "abhinav",
-
-    # Retry failed tasks automatically
     "retries": 2,
     "retry_delay": timedelta(minutes=2),
-
-    # Email (disabled for now)
     "email_on_failure": False,
     "email_on_retry": False,
 }
@@ -37,27 +33,29 @@ default_args = {
 doc_md = """
 # Healthcare Data Warehouse Pipeline
 
-This pipeline performs the complete ETL workflow for the Healthcare Data Warehouse.
+Production ETL pipeline for the Healthcare Data Warehouse.
 
-## Steps
+## Pipeline Flow
 
-1. Load raw CSV data into PostgreSQL
-2. Transform data using dbt
-3. Execute dbt data quality tests
+1. Load raw CSV files into PostgreSQL staging tables
+2. Install dbt dependencies
+3. Execute dbt transformations
+4. Execute dbt data quality tests
+5. Record pipeline execution metadata
 
-## Technology Stack
+## Technology
 
+- Apache Airflow
 - Python
 - PostgreSQL
 - dbt
-- Apache Airflow
 - Docker
 
 Author: Abhinav
 """
 
 # --------------------------------------------------
-# DAG Definition
+# DAG
 # --------------------------------------------------
 
 with DAG(
@@ -71,36 +69,46 @@ with DAG(
     doc_md=doc_md,
 ) as dag:
 
-    # -------------------------
-    # Extract + Load Raw Tables
-    # -------------------------
+    # --------------------------------------------------
+    # Load Raw Data
+    # --------------------------------------------------
 
     extract_and_load_raw = PythonOperator(
         task_id="extract_and_load_raw",
         python_callable=load_all,
+        op_kwargs={
+            "airflow_run_id": "{{ run_id }}"
+        },
     )
 
-    # -------------------------
+    # --------------------------------------------------
     # dbt Transformations
-    # -------------------------
+    # --------------------------------------------------
 
     transform_models = BashOperator(
         task_id="transform_models",
         bash_command=f"""
-        cd {DBT_PROJECT_DIR} &&
-        dbt deps --profiles-dir {DBT_PROFILES_DIR} &&
+        set -e
+
+        cd {DBT_PROJECT_DIR}
+
+        dbt deps --profiles-dir {DBT_PROFILES_DIR}
+
         dbt run --profiles-dir {DBT_PROFILES_DIR}
         """,
     )
 
-    # -------------------------
-    # Data Quality Tests
-    # -------------------------
+    # --------------------------------------------------
+    # dbt Tests
+    # --------------------------------------------------
 
     run_data_quality_tests = BashOperator(
         task_id="run_data_quality_tests",
         bash_command=f"""
-        cd {DBT_PROJECT_DIR} &&
+        set -e
+
+        cd {DBT_PROJECT_DIR}
+
         dbt test --profiles-dir {DBT_PROFILES_DIR}
         """,
     )
