@@ -1,21 +1,32 @@
 CREATE SCHEMA IF NOT EXISTS metadata;
 
-CREATE TABLE IF NOT EXISTS metadata.pipeline_audit (
-
+CREATE TABLE IF NOT EXISTS metadata.pipeline_audit
+(
     audit_id SERIAL PRIMARY KEY,
 
-    pipeline_name VARCHAR(100),
+    pipeline_name VARCHAR(100) NOT NULL,
 
-    run_start TIMESTAMP,
+    airflow_run_id VARCHAR(200),
 
-    run_end TIMESTAMP,
+    run_start TIMESTAMP NOT NULL,
 
-    status VARCHAR(20),
-
-    rows_loaded INTEGER,
+    run_end TIMESTAMP NOT NULL,
 
     duration_seconds NUMERIC(10,2),
 
-    message TEXT
+    status VARCHAR(20) NOT NULL,
 
+    rows_loaded INTEGER DEFAULT 0,
+
+    dbt_models INTEGER DEFAULT 0,
+
+    tests_total INTEGER DEFAULT 0,
+
+    tests_passed INTEGER DEFAULT 0,
+
+    tests_failed INTEGER DEFAULT 0,
+
+    message TEXT,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
