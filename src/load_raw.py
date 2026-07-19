@@ -16,7 +16,7 @@ TABLES = [
 ]
 
 
-def load_all():
+def load_all(airflow_run_id=None):
 
     run_start = datetime.now()
 
@@ -28,9 +28,14 @@ def load_all():
 
     try:
 
+        logger.info("=" * 60)
         logger.info("Starting raw data load...")
+        logger.info(f"Airflow Run ID: {airflow_run_id}")
+        logger.info("=" * 60)
 
         for table in TABLES:
+
+            logger.info(f"Loading table: {table}")
 
             df = load_csv(f"{table}.csv")
 
@@ -42,9 +47,12 @@ def load_all():
 
             total_rows += rows
 
-            logger.info(f"{table} loaded ({rows} rows)")
+            logger.info(f"Loaded {rows:,} rows into staging.{table}")
 
-        logger.info(f"Raw loading completed ({total_rows} rows).")
+        logger.info("=" * 60)
+        logger.info(f"Raw loading completed successfully.")
+        logger.info(f"Total rows loaded: {total_rows:,}")
+        logger.info("=" * 60)
 
     except Exception as e:
 
@@ -52,7 +60,7 @@ def load_all():
 
         message = str(e)
 
-        logger.exception("Pipeline failed.")
+        logger.exception("Pipeline execution failed.")
 
         raise
 
@@ -62,9 +70,14 @@ def load_all():
 
         log_pipeline_run(
             pipeline_name="healthcare_pipeline",
+            airflow_run_id=airflow_run_id,
             run_start=run_start,
             run_end=run_end,
             status=status,
             rows_loaded=total_rows,
+            dbt_models=0,
+            tests_total=0,
+            tests_passed=0,
+            tests_failed=0,
             message=message,
         )
