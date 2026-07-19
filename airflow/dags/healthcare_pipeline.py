@@ -6,6 +6,8 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
 
+from src.callbacks import pipeline_failure_callback
+
 # --------------------------------------------------
 # Project Path
 # --------------------------------------------------
@@ -28,6 +30,8 @@ default_args = {
     "retry_delay": timedelta(minutes=2),
     "email_on_failure": False,
     "email_on_retry": False,
+
+    "on_failure_callback": pipeline_failure_callback,
 }
 
 doc_md = """

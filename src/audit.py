@@ -124,3 +124,42 @@ def log_pipeline_run(
     except Exception:
         logger.exception("Failed to write pipeline audit record.")
         raise
+
+
+
+def update_pipeline_status(
+    airflow_run_id,
+    status,
+    message,
+    run_end,
+):
+    """
+    Update pipeline status after DAG completion/failure.
+    """
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        """
+        UPDATE metadata.pipeline_audit
+        SET
+            status = %s,
+            message = %s,
+            run_end = %s,
+            duration_seconds = ROUND(EXTRACT(EPOCH FROM (%s - run_start)), 2)
+        WHERE airflow_run_id = %s
+        """,
+        (
+            status,
+            message,
+            run_end,
+            run_end,
+            airflow_run_id,
+        ),
+    )
+
+    conn.commit()
+
+    cursor.close()
+    conn.close()
