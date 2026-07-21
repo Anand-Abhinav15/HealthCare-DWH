@@ -117,8 +117,23 @@ with DAG(
         """,
     )
 
+    # --------------------------------------------------
+    # dbt Docs Generate
+    # --------------------------------------------------
+
+    generate_dbt_docs = BashOperator(
+        task_id="generate_dbt_docs",
+        bash_command=f"""
+        
+        cd {DBT_PROJECT_DIR} &&
+
+        dbt docs generate --profiles-dir {DBT_PROFILES_DIR}
+        """,
+    )
+
     (
         extract_and_load_raw
         >> transform_models
         >> run_data_quality_tests
+        >> generate_dbt_docs
     )
