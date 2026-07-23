@@ -4,6 +4,19 @@ An end-to-end modern data engineering project that builds a production-style Hea
 
 The project ingests raw healthcare datasets, loads them into a PostgreSQL staging layer, transforms them into an analytics-ready dimensional warehouse using dbt, performs automated data quality testing, captures operational metadata, and orchestrates the entire workflow through Apache Airflow.
 
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Postgres](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-1.10-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
+![Airflow](https://img.shields.io/badge/Apache%20Airflow-3.x-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge)
+![ETL](https://img.shields.io/badge/ETL-Pipeline-success?style=for-the-badge)
+![Star Schema](https://img.shields.io/badge/Data_Warehouse-Star_Schema-purple?style=for-the-badge)
+
+</p>
 ---
 
 # Architecture
